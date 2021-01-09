@@ -7,8 +7,7 @@ const Home = () => {
             <Link to='/counter'>Counter App</Link>
             <Link to='/fetchapi'>Fetch API</Link>
             <Link to='/challenge1'>Challenge 1</Link>
-            <Link to='/challenge2'>Challenge 2</Link>
-            <Link to='/challenge3'>Challenge 3</Link>
+          
         </div>
 
     )

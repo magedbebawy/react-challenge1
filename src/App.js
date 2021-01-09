@@ -15,8 +15,6 @@ function App() {
           <Route path='/counter' component={Counter}></Route>
           <Route path='/fetchapi' component={FetchApi}></Route>
           <Route path='/challenge1' component={Challenge1}></Route>
-          <Route path='/challenge2' ></Route>
-          <Route path='/challenge3' ></Route>
         </Switch>
       </Router>
     </div>
