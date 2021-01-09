@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Counter from "./components/Counter";
+import FetchApi from "./components/FetchAPI";
+import { Route, Switch } from 'react-router';
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Challenge1 from "./components/Challenge1";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Link to='/' style={{margin: '40px', fontSize: '25px'}}>Home</Link>
+        <Switch>
+          <Route exact path='/' component={Home}></Route>
+          <Route path='/counter' component={Counter}></Route>
+          <Route path='/fetchapi' component={FetchApi}></Route>
+          <Route path='/challenge1' component={Challenge1}></Route>
+          <Route path='/challenge2' ></Route>
+          <Route path='/challenge3' ></Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
